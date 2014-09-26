@@ -17,29 +17,68 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTJ-4D-cYm">
-                                <rect key="frame" x="272" y="76" width="42" height="21"/>
+                                <rect key="frame" x="163" y="82" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwA-8J-aVZ">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="150" y="476" width="69" height="30"/>
+                                <state key="normal" title="next page">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextPage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gsQ-eZ-S3D"/>
+                                    <segue destination="Wnt-Kn-71i" kind="presentation" id="Nmb-N7-yGs"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uj-9o-bWB">
-                                <rect key="frame" x="257" y="163" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mxH-NA-vgz">
+            <objects>
+                <viewController id="Wnt-Kn-71i" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ewl-w3-8Jm"/>
+                        <viewControllerLayoutGuide type="bottom" id="cQV-XE-wCJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7oF-IZ-nil">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5t-Al-NVs">
+                                <rect key="frame" x="-10" y="0.0" width="356" height="44"/>
+                                <items>
+                                    <navigationItem title="demo " id="NRf-Pa-hr2">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Q01-Fh-Ipm">
+                                            <connections>
+                                                <segue destination="vXZ-lx-hvc" kind="show" id="JYU-jx-ptz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-hb-fft">
+                                <rect key="frame" x="0.0" y="515" width="309" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="search" id="tKW-fg-8NG"/>
+                                    <barButtonItem title="Item" id="eNw-WJ-cTG"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nO2-Mm-pJZ"/>
+                                    <barButtonItem title="Item" id="qrA-qJ-WMk"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oW1-cH-Hbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="136"/>
         </scene>
     </scenes>
 </document>
